@@ -1,0 +1,332 @@
+.admin-dashboard {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 32px 20px;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.admin-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 32px;
+  gap: 20px;
+}
+
+.admin-header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  letter-spacing: -0.08em;
+}
+
+.header-actions {
+  display: flex;
+  gap: 12px;
+}
+
+.export-dropdown {
+  position: relative;
+}
+
+.btn-export {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #0a1320;
+  border: none;
+  border-radius: 12px;
+  padding: 12px 16px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-export:hover {
+  transform: translateY(-1px);
+}
+
+.export-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 8px;
+  z-index: 10;
+  min-width: 180px;
+  box-shadow: var(--shadow);
+}
+
+.export-menu button {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  color: var(--text);
+  padding: 10px 12px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: 0.2s;
+}
+
+.export-menu button:hover {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  gap: 16px;
+  margin-bottom: 32px;
+}
+
+.stat-card {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 16px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-card .label {
+  color: var(--muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.stat-card strong {
+  font-size: 2rem;
+  letter-spacing: -0.08em;
+}
+
+.filters-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.search-input,
+.filter-select,
+.btn-reset {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-family: inherit;
+}
+
+.search-input {
+  flex: 1;
+  min-width: 200px;
+}
+
+.filter-select {
+  min-width: 150px;
+}
+
+.btn-reset {
+  background: rgba(255, 255, 255, 0.06);
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.btn-reset:hover {
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.bulk-actions {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  background: rgba(125, 142, 247, 0.1);
+  border: 1px solid rgba(125, 142, 247, 0.3);
+  border-radius: 12px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+}
+
+.bulk-actions span {
+  color: var(--muted);
+  font-weight: 600;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  color: #0a1320;
+  border: none;
+  border-radius: 12px;
+  padding: 10px 14px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.btn-primary:hover:not(:disabled) {
+  transform: translateY(-1px);
+}
+
+.btn-primary:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.table-wrapper {
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  overflow: auto;
+  margin-bottom: 24px;
+}
+
+.registrations-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+}
+
+.registrations-table thead {
+  background: rgba(255, 255, 255, 0.04);
+  border-bottom: 1px solid var(--line);
+}
+
+.registrations-table th {
+  padding: 12px 14px;
+  text-align: left;
+  font-weight: 600;
+  color: var(--muted);
+  text-transform: uppercase;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+}
+
+.registrations-table td {
+  padding: 12px 14px;
+  border-bottom: 1px solid var(--line);
+}
+
+.registrations-table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.04);
+}
+
+.font-mono {
+  font-family: monospace;
+  color: var(--accent);
+}
+
+.font-bold {
+  font-weight: 700;
+}
+
+.courses-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+}
+
+.tag {
+  background: rgba(94, 201, 122, 0.15);
+  color: var(--primary-strong);
+  border-radius: 999px;
+  padding: 4px 8px;
+  font-size: 0.75rem;
+  border: 1px solid rgba(94, 201, 122, 0.3);
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 4px 8px;
+  border-radius: 999px;
+  font-size: 0.75rem;
+  font-weight: 700;
+  border: 1px solid;
+}
+
+.status-registered {
+  background: rgba(93, 206, 133, 0.12);
+  color: var(--primary-strong);
+  border-color: rgba(93, 206, 133, 0.3);
+}
+
+.status-contacted {
+  background: rgba(241, 189, 124, 0.12);
+  color: var(--secondary);
+  border-color: rgba(241, 189, 124, 0.3);
+}
+
+.status-enrolled {
+  background: rgba(125, 142, 247, 0.12);
+  color: var(--accent);
+  border-color: rgba(125, 142, 247, 0.3);
+}
+
+.status-dropped {
+  background: rgba(255, 122, 122, 0.12);
+  color: var(--danger);
+  border-color: rgba(255, 122, 122, 0.3);
+}
+
+.text-center {
+  text-align: center;
+  color: var(--muted);
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.pagination button {
+  background: var(--card);
+  border: 1px solid var(--line);
+  color: var(--text);
+  border-radius: 12px;
+  padding: 10px 14px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pagination button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+@media (max-width: 768px) {
+  .admin-dashboard {
+    padding: 16px;
+  }
+
+  .admin-header {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .filters-section {
+    flex-direction: column;
+  }
+
+  .search-input,
+  .filter-select {
+    width: 100%;
+  }
+
+  .registrations-table {
+    font-size: 0.8rem;
+  }
+
+  .registrations-table th,
+  .registrations-table td {
+    padding: 8px 10px;
+  }
+}
